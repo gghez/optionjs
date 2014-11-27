@@ -1,6 +1,6 @@
 {
   "name": "optionjs",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "ignore": [
     "test",
     ".gitignore",
@@ -11,5 +11,13 @@
   ],
   "main": [
     "src/**/*.js"
-  ]
+  ],
+  "keywords": "option init parameter",
+  "license": "MIT",
+  "authors": "Gregory Ghez (http://gghez.com)",
+  "homepage": "http://github.com/gghez/optionjs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/gghez/optionjs.git"
+  }
 }
