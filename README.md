@@ -2,7 +2,9 @@ optionjs
 ========
 
 Option manager for javascript components.
-Optionjs handles options creation using default values and read/write operations as well as events on option value changes.
+Optionjs handles options creation using default values and read/write operations. The most interesting part of using optionjs is the ability to attach handler on an option value change.
+
+Using kind of util inside a component to read/write related options also gives more flexibility to add more options in the future without changing your shipped interfaces.
 
 ## Installation
 
@@ -46,7 +48,6 @@ MyProto.prototype.options = function(optKey, optValue) {
         this.options.set(optKey, optValue);
     }
 }
-
 ```
 ## API
 ###OptionsManager(options, defaults)
