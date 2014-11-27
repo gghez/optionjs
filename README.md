@@ -2,6 +2,7 @@ optionjs
 ========
 
 Option manager for javascript components.
+Optionjs handles options creation using default values and read/write operations as well as events on option value changes.
 
 ## Installation
 
@@ -18,23 +19,14 @@ Reference **optionjs.js** script:
 <script src="bower_components/optionjs/src/optionjs.js"></script>
 ```
 
-Assuming you create a prototype which needs to be configurable using option list:
+Assuming you create a prototype which needs to be configurable using option list. Optionjs replaces option management logical layer. Use **optionjs** this way:
 
 ```js
-// Constructor
-var MyProto = function(options) {
-    // Set options in instance variables
-};
+// onOpt1Change handler
+function onOpt1Change(newValue, oldValue) {
+    console.log('opt1 option value changed from', opt1OldValue, 'to', opt1NewValue);
+}
 
-// Used to override some option
-MyProto.prototype.options = function(optKey, optValue) {
-    // Change instance variables
-};
-```
-
-You do not have to implement option management logical. Use **optionjs** this way:
-
-```js
 // Constructor
 var MyProto = function(options) {
     this.options = new OptionsManager(options, {
@@ -42,16 +34,15 @@ var MyProto = function(options) {
         'opt2': null
     });
 
-    this.options.onChange('opt1', function(opt1NewValue, opt1OldValue) {
-        console.log('opt1 option value changed from', opt1OldValue, 'to', opt1NewValue);
-    });
+    // An opt1 value change raises onOpt1Change function.
+    this.options.onChange('opt1', onOpt1Change);
 };
 
 // Getter / Setter example
 MyProto.prototype.options = function(optKey, optValue) {
-    if (optValue === undefined) {
+    if (optValue === undefined) { // Use as getter
         return this.options.get(optKey);
-    } else {
+    } else { // Use as setter
         this.options.set(optKey, optValue);
     }
 }
