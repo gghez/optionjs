@@ -1,0 +1,14 @@
+{
+  "name": "optionjs",
+  "version": "0.0.2",
+  "ignore": [
+    "test",
+    ".gitignore",
+    "Grunfile.js",
+    "karma.conf.js",
+    "package.json"
+  ],
+  "main": [
+    "src/**/*.js"
+  ]
+}
