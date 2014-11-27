@@ -6,7 +6,8 @@
     ".gitignore",
     "Grunfile.js",
     "karma.conf.js",
-    "package.json"
+    "package.json",
+    "git_hooks"
   ],
   "main": [
     "src/**/*.js"
