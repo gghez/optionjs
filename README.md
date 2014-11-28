@@ -75,6 +75,7 @@ Defines or overrides existing option given its name (```optKey```) and new value
 
 ###options.onChange(optKey, handler)
 Attach an event handler called each time option has its value changed.
+
 Parameter   | Description
 ------------|------------
 optKey      | The option name.
