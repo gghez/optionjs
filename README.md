@@ -2,6 +2,8 @@ optionjs
 ========
 
 Option manager for javascript components.
+
+## Why
 Optionjs handles options creation using default values and read/write operations. The most interesting part of using optionjs is the ability to attach handler on an option value change.
 
 Using kind of util inside a component to read/write related options also gives more flexibility to add more options in the future without changing your shipped interfaces.
