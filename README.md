@@ -69,13 +69,13 @@ Parameter   | Description
 options     | Options object using keys as option names and values as option values.
 defaults    | Options object used to complete ```options``` on non-existing option name.
 
-###options.get(optKey)
+###.get(optKey)
 Retrieves an option value given its name (```optKey```).
 
-###options.set(optKey, optValue)
+###.set(optKey, optValue)
 Defines or overrides existing option given its name (```optKey```) and new value (```optValue```).
 
-###options.onChange(optKey, handler)
+###.onChange(optKey, handler)
 Attach an event handler called each time option has its value changed.
 
 Parameter   | Description
@@ -83,7 +83,7 @@ Parameter   | Description
 optKey      | The option name.
 handler     | A user defined function called with respectively new value and old value of option on which it has been attached.
 
-###options.hasChangeHandler(optKey)
+###.hasChangeHandler(optKey)
 Indicates whether option named ```optKey``` has an attached handler spying its value changes.
 Returns ```true``` or ```false``` only.
 
