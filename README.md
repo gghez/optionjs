@@ -67,7 +67,10 @@ MyProto.prototype.options = function(optKey, optValue) {
 ```js
 var optionjs = require('optionjs');
 
-var options = optionjs({ opt1: 'string1', opt3: 'string3'}, { opt2: 'default string 2' });
+var options = optionjs(
+    { opt1: 'string1', opt3: 'string3'},
+    { opt2: 'default string 2' }
+);
 
 console.log(options.get('opt1')); // string 1
 console.log(options.get('opt2')); // default string 2
