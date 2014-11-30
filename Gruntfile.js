@@ -96,7 +96,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['availabletasks:tasks']);
     grunt.registerTask('install', ['bower:install', 'copy:hooks']);
     grunt.registerTask('run', ['jshint', 'karma:continuous']);
-    grunt.registerTask('release', ['jshint', 'karma:once', 'bump:patch']);
+    grunt.registerTask('release', ['jshint', 'karma:once', 'bump:patch', 'publish']);
     grunt.registerTask('test', ['jshint', 'karma:once']);
 
 };
