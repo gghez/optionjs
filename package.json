@@ -3,7 +3,7 @@
   "version": "0.0.5",
   "description": "Option manager for any JS application.",
   "license": "MIT",
-  "homepage": "https://github.com/gghez/optionjs",
+  "homepage": "http://github.com/gghez/optionjs",
   "repository": {
     "type": "git",
     "url": "https://github.com/gghez/optionjs.git"
@@ -30,5 +30,7 @@
   },
   "scripts": {
     "postinstall": "grunt install"
-  }
+  },
+  "files": "src/**/*.js",
+  "main": "src/optionjs.js"
 }

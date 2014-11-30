@@ -7,7 +7,7 @@
      * @param {object} defaults Default values for provided options.
      * @constructor
      */
-    var OptionsManager = window.OptionsManager = function (options, defaults) {
+    var OptionsManager = function (options, defaults) {
         var _this = this;
 
         options = options || {};
@@ -72,5 +72,13 @@
             }
         }
     };
+
+    if (window){
+        window.OptionsManager = OptionsManager;
+    }
+
+    if (module && module.exports){
+        module.exports = OptionsManager;
+    }
 
 })();
