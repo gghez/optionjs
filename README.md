@@ -16,7 +16,17 @@ Using bower package manager:
 bower install https://github.com/gghez/optionjs.git
 ```
 
+Using npm package manager for nodejs module:
+
+```
+npm install optionjs
+```
+
 ## Usage
+
+You can use **optionjs** as client side javascript resource as well as nodejs module.
+
+### Client side
 
 Reference **optionjs.js** script:
 ```html
@@ -51,6 +61,18 @@ MyProto.prototype.options = function(optKey, optValue) {
     }
 }
 ```
+
+### Server side
+
+```js
+var optionjs = require('optionjs');
+
+var options = optionjs({ opt1: 'string1', opt3: 'string3'}, { opt2: 'default string 2' });
+
+console.log(options.get('opt1')); // string 1
+console.log(options.get('opt2')); // default string 2
+```
+
 ## API
 ###OptionsManager(options, defaults)
 Constructor creates a new instance of **OptionsManager**.
