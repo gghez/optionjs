@@ -73,11 +73,11 @@
         }
     };
 
-    if (window){
+    if (typeof window != 'undefined'){
         window.OptionsManager = OptionsManager;
     }
 
-    if (module && module.exports){
+    if (typeof module == 'object' && typeof module.exports == 'object'){
         module.exports = OptionsManager;
     }
 
