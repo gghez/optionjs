@@ -1,6 +1,6 @@
 {
   "name": "optionjs",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Option manager for any JS application.",
   "license": "MIT",
   "homepage": "http://github.com/gghez/optionjs",
