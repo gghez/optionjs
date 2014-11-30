@@ -78,6 +78,7 @@ console.log(options.get('opt2')); // default string 2
 ```
 
 ## API
+
 ###OptionsManager(options, defaults)
 Constructor creates a new instance of **OptionsManager**.
 Example:
