@@ -3,5 +3,4 @@
 # Pre-commit hooks
 
 # Lint stuff before committing
-grunt jshint
-grunt karma:once
+grunt test
