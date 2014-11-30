@@ -78,7 +78,9 @@
     }
 
     if (typeof module == 'object' && typeof module.exports == 'object'){
-        module.exports = OptionsManager;
+        module.exports = function(options, defaults){
+            return new OptionsManager(options, defaults);
+        };
     }
 
 })();
