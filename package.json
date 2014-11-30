@@ -1,6 +1,6 @@
 {
   "name": "optionjs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Option manager for any JS application.",
   "license": "MIT",
   "homepage": "http://github.com/gghez/optionjs",
@@ -26,11 +26,14 @@
     "karma": "^0.12.24",
     "karma-chrome-launcher": "^0.1.5",
     "grunt-karma": "^0.9.0",
-    "grunt-bower-task": "^0.4.0"
+    "grunt-bower-task": "^0.4.0",
+    "grunt-publish": "0.0.5"
   },
   "scripts": {
 
   },
-  "files": "src/**/*.js",
+  "files": [
+    "src/**/*.js"
+  ],
   "main": "src/optionjs.js"
 }

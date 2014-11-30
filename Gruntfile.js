@@ -83,6 +83,12 @@ module.exports = function (grunt) {
                 push: true,
                 pushTo: 'origin'
             }
+        },
+
+        publish: {
+            main: {
+                src: ['./']
+            }
         }
 
     });
