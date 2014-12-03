@@ -130,14 +130,11 @@ Returns ```true``` or ```false``` only.
  3. Run tests
 
     a. Continuous integration
-
-        ```
-        grunt run
-        ```
+    ```
+    grunt run
+    ```
 
     b. One time
-
-        ```
-        grunt test
-        ```
-        
+    ```
+    grunt test
+    ```
