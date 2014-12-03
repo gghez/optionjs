@@ -2,6 +2,7 @@ optionjs
 ========
 
 Option manager for javascript components.
+[![Build Status](https://travis-ci.org/gghez/optionjs.png?branch=master)](https://travis-ci.org/gghez/optionjs)
 
 ## Why
 
