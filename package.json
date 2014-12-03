@@ -31,7 +31,8 @@
     "grunt-publish": "0.0.5"
   },
   "scripts": {
-    "postinstall": "grunt install"
+    "postinstall": "grunt install",
+    "test": "grunt test"
   },
   "files": [
     "src/**/*.js"
