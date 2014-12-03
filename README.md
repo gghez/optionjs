@@ -29,7 +29,7 @@ npm install optionjs
 
 You can use **optionjs** as client side javascript resource as well as nodejs module.
 
-### Client side
+### Client side (Regular/HTML JS)
 
 Reference **optionjs.js** script:
 ```html
@@ -65,7 +65,7 @@ MyProto.prototype.options = function(optKey, optValue) {
 }
 ```
 
-### Server side
+### Server side (NodeJS)
 
 ```js
 var optionjs = require('optionjs');
