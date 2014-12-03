@@ -127,7 +127,17 @@ Returns ```true``` or ```false``` only.
   npm install
   ```
   
- 3. Run tests as continuous integration
-  ```
-  grunt run
-  ```
+ 3. Run tests
+
+    a. Continuous integration
+
+        ```
+        grunt run
+        ```
+
+    b. One time
+
+        ```
+        grunt test
+        ```
+        
