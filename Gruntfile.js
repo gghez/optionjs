@@ -28,26 +28,6 @@ module.exports = function (grunt) {
             }
         },
 
-        connect: {
-            options: {
-                port: 9000,
-                hostname: 'localhost'
-            },
-
-            server: {
-                options: {
-                    base: __dirname,
-                    livereload: true
-                }
-            }
-        },
-
-        open: {
-            server: {
-                url: 'http://localhost:<%= connect.options.port %>'
-            }
-        },
-
         bower: {
             install: {
                 options: {
@@ -93,6 +73,7 @@ module.exports = function (grunt) {
 
     });
 
+    grunt.registerTask('precommit', ['test']);
     grunt.registerTask('default', ['availabletasks:tasks']);
     grunt.registerTask('install', ['bower:install', 'copy:hooks']);
     grunt.registerTask('run', ['jshint', 'karma:continuous']);

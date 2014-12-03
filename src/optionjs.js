@@ -73,10 +73,12 @@
         }
     };
 
+    // Export for regular JS use
     if (typeof window != 'undefined'){
         window.OptionsManager = OptionsManager;
     }
 
+    // Export for NodeJS
     if (typeof module == 'object' && typeof module.exports == 'object'){
         module.exports = function(options, defaults){
             return new OptionsManager(options, defaults);

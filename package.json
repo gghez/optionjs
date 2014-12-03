@@ -24,13 +24,13 @@
     "sinon": "^1.10.3",
     "karma-sinon": "^1.0.3",
     "karma": "^0.12.24",
-    "karma-chrome-launcher": "^0.1.5",
+    "karma-phantomjs-launcher": "^0.1.4",
     "grunt-karma": "^0.9.0",
     "grunt-bower-task": "^0.4.0",
     "grunt-publish": "0.0.5"
   },
   "scripts": {
-
+    "postinstall": "grunt install"
   },
   "files": [
     "src/**/*.js"
