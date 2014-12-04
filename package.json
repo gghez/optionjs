@@ -31,7 +31,7 @@
     "grunt-publish": "0.0.5"
   },
   "scripts": {
-    "postinstall": "npm install -g grunt-cli && grunt install",
+    "postinstall": "grunt install",
     "test": "grunt test"
   },
   "files": [
