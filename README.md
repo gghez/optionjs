@@ -3,7 +3,8 @@ optionjs
 
 Option manager for javascript components.
 
-[![Build Status](https://travis-ci.org/gghez/optionjs.png?branch=master)](https://travis-ci.org/gghez/optionjs)
+[![NPM Version](https://img.shields.io/npm/v/optionjs.svg?style=flat)](https://npmjs.org/package/optionjs)
+[![Build Status](https://img.shields.io/travis/gghez/optionjs.svg?style=flat)](https://travis-ci.org/gghez/optionjs)
 
 ## Why
 
@@ -138,3 +139,7 @@ Returns ```true``` or ```false``` only.
     ```
     grunt test
     ```
+
+## License
+
+[MIT](LICENSE)
