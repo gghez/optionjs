@@ -73,11 +73,10 @@ module.exports = function (grunt) {
 
     });
 
-    grunt.registerTask('precommit', ['test']);
     grunt.registerTask('default', ['availabletasks:tasks']);
-    grunt.registerTask('install', ['bower:install', 'copy:hooks']);
+    grunt.registerTask('test', ['jshint', 'karma:once']);
+    grunt.registerTask('prepush', ['test']);
     grunt.registerTask('run', ['jshint', 'karma:continuous']);
     grunt.registerTask('release', ['jshint', 'karma:once', 'bump:patch', 'publish']);
-    grunt.registerTask('test', ['jshint', 'karma:once']);
 
 };
