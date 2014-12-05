@@ -77,6 +77,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', ['jshint', 'karma:once']);
     grunt.registerTask('prepush', ['test']);
     grunt.registerTask('run', ['jshint', 'karma:continuous']);
-    grunt.registerTask('release', ['jshint', 'karma:once', 'bump:patch', 'publish']);
+    // Keep test (even if pre-push hook also test) to avoid bump create tag if failed.
+    grunt.registerTask('release', ['test', 'bump:patch', 'publish']);
 
 };
