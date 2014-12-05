@@ -31,7 +31,8 @@
     "grunt-publish": "0.0.5"
   },
   "scripts": {
-    "postinstall": "grunt bower:install && grunt copy:hooks"
+    "postinstall": "grunt bower:install && grunt copy:hooks",
+    "test": "grunt test"
   },
   "files": [
     "src/**/*.js"
