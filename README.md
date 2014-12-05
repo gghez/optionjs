@@ -6,7 +6,7 @@ Option manager for javascript components.
 [![NPM Version](https://img.shields.io/npm/v/optionjs.svg?style=flat)](https://npmjs.org/package/optionjs)
 [![NPM Downloads](https://img.shields.io/npm/dm/optionjs.svg?style=flat)](https://npmjs.org/package/optionjs)
 [![Build Status](https://img.shields.io/travis/gghez/optionjs.svg?style=flat)](https://travis-ci.org/gghez/optionjs)
-[![Coverage Status](https://img.shields.io/coveralls/gghez/optionjs.svg?style=flat)](https://coveralls.io/r/gghez/optionjs?branch=master)
+[![Coverage Status](https://img.shields.io/coveralls/gghez/optionjs.svg?style=flat)](https://coveralls.io/r/gghez/optionjs)
 
 ## Why
 
