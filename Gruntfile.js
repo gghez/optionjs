@@ -9,8 +9,17 @@ module.exports = function (grunt) {
         },
 
         jshint: {
-            all: {
-                src: ['Grunfile.js', 'karma.conf.js', 'src/**/*.js', 'test/**/*.js']
+            dev: {
+                src: ['src/**/*.js']
+            },
+            dist: {
+                src: ['dist/**/*.js']
+            },
+            test: {
+                src: ['test/**/*.js']
+            },
+            config: {
+                src: ['Gruntfile.js', 'karma.conf.js']
             }
         },
 
@@ -23,6 +32,15 @@ module.exports = function (grunt) {
                         cwd: 'git_hooks/',
                         src: '*',
                         dest: '.git/hooks/'
+                    }
+                ]
+            },
+
+            dist: {
+                files: [
+                    {
+                        src: 'src/index.js',
+                        dest: 'dist/optionjs.js'
                     }
                 ]
             }
@@ -74,9 +92,12 @@ module.exports = function (grunt) {
     });
 
     grunt.registerTask('default', ['availabletasks:tasks']);
-    grunt.registerTask('test', ['jshint', 'karma:once']);
+
+    grunt.registerTask('compile:dev', ['jshint:dev', 'jshint:config', 'jshint:test']);
+    grunt.registerTask('compile:dist', ['copy:dist', 'jshint:dist']);
+    grunt.registerTask('test', ['compile:dev', 'karma:once']);
     grunt.registerTask('prepush', ['test']);
-    grunt.registerTask('run', ['jshint', 'karma:continuous']);
+    grunt.registerTask('run', ['compile:dev', 'karma:continuous']);
     // Keep test (even if pre-push hook also test) to avoid bump create tag if failed.
     grunt.registerTask('release', ['test', 'bump:patch', 'publish']);
 

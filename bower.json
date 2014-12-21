@@ -10,7 +10,7 @@
     "git_hooks"
   ],
   "main": [
-    "src/**/*.js"
+    "dist/**/*.js"
   ],
   "keywords": "option init parameter",
   "license": "MIT",
