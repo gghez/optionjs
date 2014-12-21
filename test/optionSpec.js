@@ -1,4 +1,4 @@
-describe('Main tests', function () {
+describe('OptionsManager', function () {
 
 
     it('Retrieve initially defined options.', function () {
@@ -114,4 +114,26 @@ describe('Main tests', function () {
     });
 
 
+    it('Notify non-existing option should not fail.', function () {
+        var optMgr = new OptionsManager({
+            opt1: 'string1'
+        });
+
+        optMgr.notify('opt2');
+    });
+
+
+    it('Notify option should call handler.', function () {
+        var handler = sinon.spy();
+
+        var optMgr = new OptionsManager({
+            opt1: 'string1'
+        });
+
+        optMgr.onChange('opt1', handler);
+        optMgr.notify('opt1');
+
+        assert.isTrue(handler.calledOnce);
+        assert.isTrue(handler.calledWith('string1', 'string1'));
+    });
 });

@@ -1,4 +1,4 @@
-(function(){
+(function () {
 
     /**
      * Initializes a new OptionsManager instance based on provided options and their default values.
@@ -73,14 +73,28 @@
         }
     };
 
+    /**
+     * Notifies attached handlers option value changed. Useful on object or arrays.
+     *
+     * @param optKey The option key.
+     */
+    OptionsManager.prototype.notify = function (optKey) {
+        var _this = this;
+
+        var optValue = _this.options[optKey];
+        if (_this.handlers[optKey]) {
+            _this.handlers[optKey](optValue, optValue);
+        }
+    };
+
     // Export for regular JS use
-    if (typeof window != 'undefined'){
+    if (typeof window != 'undefined') {
         window.OptionsManager = OptionsManager;
     }
 
     // Export for NodeJS
-    if (typeof module == 'object' && typeof module.exports == 'object'){
-        module.exports = function(options, defaults){
+    if (typeof module == 'object' && typeof module.exports == 'object') {
+        module.exports = function (options, defaults) {
             return new OptionsManager(options, defaults);
         };
     }
