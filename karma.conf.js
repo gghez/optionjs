@@ -12,7 +12,7 @@ module.exports = function (config) {
 
         // list of files / patterns to load in the browser
         files: [
-            'src/optionjs.js',
+            'src/index.js',
             'test/*Spec.js'
         ],
 
