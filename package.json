@@ -38,5 +38,5 @@
   "files": [
     "src/**/*.js"
   ],
-  "main": "src/optionjs.js"
+  "main": "src/index.js"
 }
