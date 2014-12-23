@@ -56,16 +56,19 @@ module.exports = function (grunt) {
         },
 
         karma: {
-            continuous: {
-                configFile: 'karma.conf.js',
-                autoWatch: true,
-                singleRun: false
-            },
-            once: {
+            unit: {
                 configFile: 'karma.conf.js',
                 autoWatch: false,
                 singleRun: true
             }
+        },
+
+        mochacli: {
+            options: {
+                recursive: true,
+                reporter: 'progress'
+            },
+            unit: ['test/node/']
         },
 
         bump: {
@@ -95,9 +98,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('compile:dev', ['jshint:dev', 'jshint:config', 'jshint:test']);
     grunt.registerTask('compile:dist', ['copy:dist', 'jshint:dist']);
-    grunt.registerTask('test', ['compile:dev', 'karma:once']);
+    grunt.registerTask('test', ['compile:dev', 'karma:unit', 'mochacli:unit']);
     grunt.registerTask('prepush', ['test']);
-    grunt.registerTask('run', ['compile:dev', 'karma:continuous']);
+
     // Keep test (even if pre-push hook also test) to avoid bump create tag if failed.
     grunt.registerTask('release', ['test', 'bump:patch', 'publish']);
 
