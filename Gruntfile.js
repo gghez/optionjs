@@ -102,6 +102,6 @@ module.exports = function (grunt) {
     grunt.registerTask('prepush', ['test']);
 
     // Keep test (even if pre-push hook also test) to avoid bump create tag if failed.
-    grunt.registerTask('release', ['test', 'bump:patch', 'publish']);
+    grunt.registerTask('release', ['test', 'compile:dist', 'bump:patch', 'publish']);
 
 };

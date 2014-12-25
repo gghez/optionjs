@@ -1,6 +1,6 @@
 {
   "name": "optionjs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Option manager for any JS application.",
   "license": "MIT",
   "homepage": "http://github.com/gghez/optionjs",
@@ -33,11 +33,11 @@
     "grunt-mocha-cli": "~1.9.0"
   },
   "scripts": {
-    "postinstall": "grunt bower:install && grunt copy:hooks",
+    "postinstall": "grunt bower:install && grunt copy:hooks && grunt compile:dev",
     "test": "grunt test"
   },
   "files": [
-    "src/**/*.js"
+    "dist/**/*.js"
   ],
-  "main": "src/index.js"
+  "main": "dist/optionjs.js"
 }
