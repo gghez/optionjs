@@ -1,5 +1,16 @@
 describe('OptionsManager', function () {
 
+    var sinon, assert, OptionsManager;
+
+    if (typeof module == 'object' && typeof require == 'function') {
+        sinon = require('sinon');
+        assert = require('chai').assert;
+        OptionsManager = require('../src/index');
+    } else {
+        sinon = window.sinon;
+        assert = window.chai.assert;
+        OptionsManager = window.OptionsManager;
+    }
 
     it('Retrieve initially defined options.', function () {
         var optMgr = new OptionsManager({

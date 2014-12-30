@@ -1,4 +1,7 @@
-(function () {
+var OptionsManager = (function () {
+
+    var isNode = typeof module == 'object' && typeof module.exports == 'object' && typeof require == 'function';
+
 
     /**
      * Initializes a new OptionsManager instance based on provided options and their default values.
@@ -87,16 +90,10 @@
         }
     };
 
-    // Export for regular JS use
-    if (typeof window != 'undefined') {
-        window.OptionsManager = OptionsManager;
+    if (isNode) {
+        module.exports = OptionsManager;
     }
 
-    // Export for NodeJS
-    if (typeof module == 'object' && typeof module.exports == 'object') {
-        module.exports = function (options, defaults) {
-            return new OptionsManager(options, defaults);
-        };
-    }
+    return OptionsManager;
 
 })();

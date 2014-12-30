@@ -33,7 +33,7 @@
     "grunt-mocha-cli": "~1.9.0"
   },
   "scripts": {
-    "postinstall": "grunt bower:install && grunt copy:hooks && grunt compile:dev",
+    "postinstall": "grunt bower:install && grunt copy:hooks && grunt compile",
     "test": "grunt test"
   },
   "files": [
