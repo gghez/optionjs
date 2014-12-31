@@ -5,7 +5,7 @@ describe('OptionsManager', function () {
     if (typeof module == 'object' && typeof require == 'function') {
         sinon = require('sinon');
         assert = require('chai').assert;
-        OptionsManager = require('../src/index');
+        OptionsManager = require('../src/option');
     } else {
         sinon = window.sinon;
         assert = window.chai.assert;

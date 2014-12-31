@@ -1,17 +1,16 @@
 {
   "name": "optionjs",
-  "version": "1.0.5",
+  "version": "1.1.0",
   "ignore": [
     "test",
     ".gitignore",
     "Gruntfile.js",
     "karma.conf.js",
     "package.json",
-    "git_hooks",
-    "src"
+    "git_hooks"
   ],
   "main": [
-    "dist/**/*.js"
+    "src/**/*.js"
   ],
   "keywords": "option init parameter",
   "license": "MIT",

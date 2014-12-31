@@ -86,9 +86,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('compile', ['jshint']);
     grunt.registerTask('test', ['compile', 'karma:unit', 'mochacli:unit']);
-    grunt.registerTask('prepush', ['test']);
 
-    // Keep test (even if pre-push hook also test) to avoid bump create tag if failed.
     grunt.registerTask('release', ['test', 'compile', 'bump:patch', 'publish']);
 
 };
