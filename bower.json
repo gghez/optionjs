@@ -1,13 +1,12 @@
 {
   "name": "optionjs",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "ignore": [
     "test",
     ".gitignore",
     "Gruntfile.js",
     "karma.conf.js",
-    "package.json",
-    "git_hooks"
+    "package.json"
   ],
   "main": [
     "src/**/*.js"
