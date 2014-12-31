@@ -85,8 +85,8 @@ module.exports = function (grunt) {
     grunt.registerTask('default', ['availabletasks:tasks']);
 
     grunt.registerTask('compile', ['jshint']);
+    grunt.registerTask('install', ['bower:install', 'compile']);
     grunt.registerTask('test', ['compile', 'karma:unit', 'mochacli:unit']);
-
     grunt.registerTask('release', ['test', 'compile', 'bump:patch', 'publish']);
 
 };
