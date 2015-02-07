@@ -3,9 +3,8 @@ optionjs
 
 Option manager for javascript components.
 
-[![NPM Version](https://img.shields.io/npm/v/optionjs.svg?style=flat)](https://npmjs.org/package/optionjs)
-[![NPM Downloads](https://img.shields.io/npm/dm/optionjs.svg?style=flat)](https://npmjs.org/package/optionjs)
-[![Build Status](https://img.shields.io/travis/gghez/optionjs.svg?style=flat)](https://travis-ci.org/gghez/optionjs)
+[![Build Status](https://travis-ci.org/gghez/optionjs.svg?branch=master)](https://travis-ci.org/gghez/optionjs)
+[![NPM version](https://badge.fury.io/js/optionjs.png)](http://badge.fury.io/js/optionjs)
 
 ## Why
 
